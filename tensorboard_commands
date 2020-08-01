@@ -1,0 +1,9 @@
+Ensure CUPTI exists on the path:
+/sbin/ldconfig -N -v $(sed 's/:/ /g' <<< $LD_LIBRARY_PATH) | \
+grep libcupti
+
+If you don't have CUPTI on the path, prepend its installation directory to the $LD_LIBRARY_PATH environment variable by running:
+
+export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+
+Run the ldconfig command above again to verify that the CUPTI library is found.

@@ -1,0 +1,20 @@
+# Virtual Environment Folder
+/venv/
+
+# Pycharm Settings
+.idea/
+
+# Pycache
+__pycache__
+
+# Cuda Caches and Logs
+*.tfcache.*
+cuda_utilities/*/*
+
+# Keep folders as an exception
+!cuda_utilities/*/.gitkeep
+
+# Media Files
+*.jpg
+*.avi
+*.mp4
