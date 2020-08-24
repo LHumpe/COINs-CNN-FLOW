@@ -1,1 +1,6 @@
-# CNN-FLOW-COINs
+# A Convolutional-Neural-Network for the Facial Recognition of the Emotional State of Flow
+This repository contains code which was used to detect the emotional state of flow using facial emotion recognition. This was done for a Seminar, namely: Collaborative Innovation Networks. We utilized transfer learning by fine-tuning the popular ResNet-50 architecture which we trained on self-labeled YouTube videos of live performing musicians. Apart from the fact that data labeling can turn into a decade-taking nightmare this was maybe one of the most interesting projects so far. Even though we did not design a new network architecture, working on this data science from the raw beginning to the whole end was a very valuable experience. 
+
+Since grading is in progress and since we are planning to write a scientific paper the submitted is not available to the public yet. If you are interested in reading it you can just leave me a <input id=username type="text" placeholder="github username or repo link">
+<button onclick="fetch(`https://api.github.com/users/${username.value.replace(/^.*com[/]([^/]*).*$/,'$1')}/events/public`).then(e=> e.json()).then(e => [...new Set([].concat.apply([],e.filter(x => x.type==='PushEvent').map(x => x.payload.commits.map(c => c.author.email)))).values()]).then(x => results.innerText = x)">MESSAGE</button>
+<div id=results></div>.
