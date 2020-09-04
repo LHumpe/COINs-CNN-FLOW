@@ -34,4 +34,4 @@ for images, labels in final_ds.take(-1):
 result_frame = pd.DataFrame({'FLOW': flow.reshape(-1), 'PROB': proba.reshape(-1), 'FILE': paths},
                             index=range(0, len(flow)))
 
-result_frame.to_csv('data/coins_analysis/results.csv', index=False)
+result_frame.to_csv('data/coins_analysis/results_lesson6_7.csv', index=False)
