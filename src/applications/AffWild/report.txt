@@ -1,0 +1,37 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: vggface.py
+--------------------------------------------------------------------------------
+vggface.py:70:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'vggface.py'
+ outputting to 'vggface_2.py'
+--------------------------------------------------------------------------------
+
+70:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+70:15: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+77:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+80:27: INFO: Added keywords to args of function 'tf.nn.conv2d'
+80:27: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+87:23: INFO: Added keywords to args of function 'tf.nn.max_pool'
+87:23: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+87:23: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+98:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+110:25: INFO: Renamed 'tf.nn.relu_layer' to 'tf.compat.v1.nn.relu_layer'
+110:55: INFO: Renamed 'tf.nn.xw_plus_b' to 'tf.compat.v1.nn.xw_plus_b'
+125:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+138:25: INFO: Renamed 'tf.nn.relu_layer' to 'tf.compat.v1.nn.relu_layer'
+138:55: INFO: Renamed 'tf.nn.xw_plus_b' to 'tf.compat.v1.nn.xw_plus_b'
+146:21: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+158:25: INFO: Renamed 'tf.nn.relu_layer' to 'tf.compat.v1.nn.relu_layer'
+158:55: INFO: Renamed 'tf.nn.xw_plus_b' to 'tf.compat.v1.nn.xw_plus_b'
+--------------------------------------------------------------------------------
+
