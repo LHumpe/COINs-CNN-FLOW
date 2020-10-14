@@ -2,14 +2,13 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 from ..models.utility_funcs.preprocessor import *
-#from src.models.utility_funcs.preprocessor import *
 import pandas as pd
 
 img_height = 224
 img_width = 224
 batch_size = 50
 
-data_path = 'data/processed/validation_initial/'
+data_path = 'data/processed/YouTube/img/'
 model_path = 'src/models/weights/final_model_weights.hdf5'
 cache_dir = 'cuda_utilities/caches/'
 
@@ -34,4 +33,4 @@ for images, labels in final_ds.take(-1):
 result_frame = pd.DataFrame({'PROB': flows, 'FILE': paths},
                             index=range(0, len(flows)))
 
-result_frame.to_csv('data/yt_analysis/results_irr.csv', index=False)
+result_frame.to_csv('data/yt_analysis/results.csv', index=False)
