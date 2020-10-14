@@ -20,3 +20,6 @@ cuda_utilities/*/*
 *.jpg
 *.avi
 *.mp4
+
+#Fer Prediction Model
+/src/models/weights/FER_Model.h5

@@ -27,7 +27,7 @@ def get_label(file_path, label_pos=-2):
 class Preprocessor:
 
     def __init__(self, batch_size=50, img_height=150, img_width=150,
-                 pad=True, saturation=True, brightness=True, flip=True,
+                 channels= 3, pad=True, saturation=True, brightness=True, flip=True,
                  quality=True, normalize=True, resnet50=True, rotate=True, label_pos=-2):
         self.BATCH_SIZE = batch_size
         self.IMG_HEIGHT = img_height
@@ -41,9 +41,10 @@ class Preprocessor:
         self.resnet50 = resnet50
         self.rotate = rotate
         self.label_pos = label_pos
+        self.channels = channels
 
     def decode_img(self, img):
-        img = tf.image.decode_jpeg(img, channels=3)
+        img = tf.image.decode_jpeg(img, channels=self.channels)
         img = tf.cast(img, tf.float32)
 
         if self.rotate:
