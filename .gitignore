@@ -1,5 +1,7 @@
 # Virtual Environment Folder
+/Uvenv/
 /venv/
+/Wvenv/
 
 # Pycharm Settings
 .idea/
