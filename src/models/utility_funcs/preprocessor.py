@@ -95,7 +95,7 @@ class Preprocessor:
             else:
                 ds = ds.cache()
 
-        ds = ds.shuffle(buffer_size=shuffle_buffer_size)
+        #ds = ds.shuffle(buffer_size=shuffle_buffer_size)
 
         ds = ds.batch(self.BATCH_SIZE)
 
