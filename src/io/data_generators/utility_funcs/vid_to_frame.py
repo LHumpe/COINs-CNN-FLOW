@@ -77,6 +77,8 @@ def convert_to_annotated_images_cvat(clip_list, sense='training', irr_confidence
         folder_name = 'validation_{}'.format(fold)
     elif sense == 'test':
         folder_name = 'test'
+    elif sense == 'YouTube':
+        folder_name = 'YouTube'
     else:
         raise Exception(
             'You have not chosen a proper sense. The possible choices are:[training, validation, test] ' +
@@ -123,6 +125,9 @@ def convert_to_annotated_images_cvat(clip_list, sense='training', irr_confidence
         balanced = grouped.apply(lambda x: x.sample(
             grouped.size().min()).reset_index(drop=True))
         annotations = balanced.reset_index(drop=True)
+
+    elif balance == 'none':
+        pass
 
     task_list = [(vid_name, annotations, folder_name) for vid_name in clip_list]
 
