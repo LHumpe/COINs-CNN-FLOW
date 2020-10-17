@@ -22,8 +22,11 @@ cuda_utilities/*/*
 *.mp4
 
 #Fer Prediction Model
-/src/models/weights/FER/FER_Model.h5
+/src/models/weights/FER/
 
 # Result Folders
 /results/coins_analysis/
 /results/yt_analysis/
+
+# Original FER Dataset
+/data/FER/fer2013.csv

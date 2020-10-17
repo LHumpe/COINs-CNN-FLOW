@@ -33,4 +33,4 @@ for images, labels in final_ds.take(-1):
 result_frame = pd.DataFrame({'PROB': flows, 'FILE': paths},
                             index=range(0, len(flows)))
 
-result_frame.to_csv('data/yt_analysis/results.csv', index=False)
+result_frame.to_csv('results/yt_analysis/results.csv', index=False)
