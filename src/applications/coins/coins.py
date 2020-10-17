@@ -1,7 +1,7 @@
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-from ..models.utility_funcs.preprocessor import *
+from src.models.utility_funcs.preprocessor import *
 import pandas as pd
 
 img_height = 224

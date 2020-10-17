@@ -1,7 +1,7 @@
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-from ..models.utility_funcs.preprocessor import *
+from src.models.utility_funcs.preprocessor import *
 import pandas as pd
 
 img_height = 197
@@ -36,4 +36,4 @@ for images, labels in final_ds.take(-1):
 result_frame = pd.DataFrame({'EMO': flows, 'FILE': paths},
                             index=range(0, len(flows)))
 
-result_frame.to_csv('data/yt_analysis/FER_results.csv', index=False)
+result_frame.to_csv('results/yt_analysis/FER_results_public.csv', index=False)
