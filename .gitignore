@@ -25,4 +25,5 @@ cuda_utilities/*/*
 /src/models/weights/FER_Model.h5
 
 # Result Folders
-/coins_analysis/
+/results/coins_analysis/
+/results/yt_analysis/
