@@ -23,3 +23,6 @@ cuda_utilities/*/*
 
 #Fer Prediction Model
 /src/models/weights/FER_Model.h5
+
+# Result Folders
+/coins_analysis/
